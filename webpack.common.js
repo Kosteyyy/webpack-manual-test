@@ -3,7 +3,7 @@ const path = require("path");
 const loader = require("sass-loader");
 
 module.exports = {
-  entry: "./src/index.js",
+  entry: { main: "./src/index.js", vendor: "./src/vendor.js" },
   module: {
     rules: [
       {
@@ -19,7 +19,7 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: "imgs/[name].[hash].[ext]",
-        }
+        },
       },
     ],
   },
